@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Global Weather & Country Info</title>
+    <meta name="description" content="A simple app to check detailed country info and real-time current weather.">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="app-container">
+        <header>
+            <h1>Climate<span class="highlight">Cast</span></h1>
+            <p>Real-time country data and weather forecasts</p>
+        </header>
+
+        <main>
+            <div class="search-container">
+                <input type="text" id="countryInput" placeholder="Enter a country name (e.g., Finland)" autocomplete="off">
+                <button id="searchBtn">Search</button>
+            </div>
+            
+            <div id="loader" class="loader hidden"></div>
+            <div id="errorMsg" class="error-msg hidden"></div>
+
+            <div id="resultsContainer" class="results-container hidden">
+                <div class="card country-card">
+                    <div class="card-header">
+                        <h2>Country Info</h2>
+                    </div>
+                    <div class="card-body" id="countryData">
+                        <!-- Populated by JS -->
+                    </div>
+                </div>
+
+                <div class="card weather-card">
+                    <div class="card-header">
+                        <h2>Current Weather</h2>
+                    </div>
+                    <div class="card-body" id="weatherData">
+                        <!-- Populated by JS -->
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
